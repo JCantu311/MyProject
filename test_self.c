@@ -31,6 +31,20 @@ int main()
     {
         system("py test2.py");
     }
+    printf("Do you have Rust installed? (y/n)");
+    char yOrN;
+    char charY = 'y';
+    char charN = 'n';
+    scanf(" %c", &yOrN);
+    if (yOrN == charN) {
+        printf("Install Rust before continuing\n");
+        system("pause");
+    } else if (yOrN == charY) {
+        printf("Okay you can continue\n");
+    }
+    printf("(We're gonna try running 'rustc testRust.rs' to compile the testRust.rs Rust file but it probably won't work, apologies for the inevitable error)\n");
+    system("rustc testRust.rs");
+    system("testRust.exe");
     system("pause");
     printf("Enter 'loop' if you wish to restart\n");
     printf("Type anything else if you wish to quit: ");
